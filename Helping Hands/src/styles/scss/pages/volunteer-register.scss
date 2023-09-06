@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-page-volunteer {
+  min-height: 100vh;
+
+  padding: 1rem;
+  h3 {
+    color: #6c63ff;
+    font-weight: bold;
+    padding: 1rem;
+  }
+  .group {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 2rem;
+    gap: 1rem;
+    .img-area {
+      width: 20%;
+      min-width: 8rem;
+    }
+    h5 {
+      font-weight: bold;
+      border-top: 1px solid;
+      border-left: 1px solid;
+      border-right: 1px solid;
+      border-radius: 1rem;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      font-size: 1.4rem;
+      color: #6c63ff;
+      margin-bottom: 1.4rem;
+    }
+    form {
+      overflow-x: hidden;
+      border-radius: 1rem;
+      padding: 1rem;
+      background-color: #6c63ff;
+      min-height: 20vh;
+      width: 40rem;
+      box-shadow: 0px 0px 10px #6c63ff;
+      label {
+        color: white;
+        font-weight: bold;
+      }
+      button {
+        background-color: white;
+        font-size: 1.2rem;
+        color: #6c63ff;
+        font-weight: bold;
+        padding-inline: 1rem;
+        padding-block: 0.5rem;
+        border-radius: 1rem;
+        border: 0px;
+        transition: 0.2s;
+        &:hover {
+          box-shadow: 0px 0px 10px white;
+        }
+      }
+    }
+    #default {
+      color: #6c63ff;
+    }
+  }
+}
+
+.step {
+  display: none;
+}
+
+.step.active {
+  display: block;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 1rem;
+  padding: 0;
+  box-shadow: 0px 0px 10px white;
+}
+
+.progress {
+  height: 100%;
+  background-color: white;
+  width: 0%;
+  transition: 0.5s;
+}
+
+@media (max-width: 888px) {
+  .img-area {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+}
+
+@media (max-width: 648px) {
+  .main-page-volunteer {
+    padding: 0;
+    .group {
+      padding: 0;
+      width: 100%;
+      form {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

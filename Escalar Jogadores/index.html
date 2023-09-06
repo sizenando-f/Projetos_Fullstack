@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=1, initial-scale=1.0" />
+    <title>Escalar jogadores</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Escalar jogadores</h1>
+      <section id="addPlayerSection">
+        <h2>Adicionar</h2>
+        <label for="addNamePlayerInput">Nome do jogador: </label>
+        <input
+          type="text"
+          name="addName"
+          id="addNamePlayerInput"
+          class="formInput"
+        />
+        <br />
+        <label for="addPositionPlayerInput">Posição do jogador: </label>
+        <input
+          type="text"
+          name="addPosition"
+          id="addPositionPlayerInput"
+          class="formInput"
+        />
+        <br />
+        <label for="addShirtNumberPlayerInput">Número da camisa: </label>
+        <input
+          type="text"
+          name="addShirt"
+          id="addShirtNumberPlayerInput"
+          class="formInput"
+        />
+        <br />
+        <button onclick="addPlayer()">Escalar jogador</button>
+      </section>
+
+      <section id="removePlayerSection">
+        <h2>Remover</h2>
+        <label for="removeShirtNumberPlayerInput">Número da camisa: </label>
+        <input
+          type="text"
+          name="removeShirt"
+          id="removeShirtNumberPlayerInput"
+          class="formInput"
+        />
+        <br />
+        <button onclick="removePlayer()">Remover jogador</button>
+      </section>
+      <hr />
+      <section id="scaledPlayers">
+        <h2>Jogadores escalados</h2>
+      </section>
+    </div>
+  </body>
+</html>

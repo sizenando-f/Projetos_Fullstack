@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer type="module"></script>
+  </head>
+  <body data-theme="light">
+    <div class="container">
+      <div class="screen">
+        <input type="text" id="enter-input" />
+        <input type="text" id="out-input" disabled />
+      </div>
+      <div class="buttons">
+        <button type="button" id="clear">C</button>
+        <button type="button" class="calcBtn" data-value="(">(</button>
+        <button type="button" class="calcBtn" data-value=")">)</button>
+        <button type="button" class="calcBtn" data-value="/" class="operator">
+          /
+        </button>
+        <button type="button" class="calcBtn" data-value="7">7</button>
+        <button type="button" class="calcBtn" data-value="8">8</button>
+        <button type="button" class="calcBtn" data-value="9">9</button>
+        <button type="button" class="calcBtn" data-value="*" class="operator">
+          x
+        </button>
+        <button type="button" class="calcBtn" data-value="4">4</button>
+        <button type="button" class="calcBtn" data-value="5">5</button>
+        <button type="button" class="calcBtn" data-value="6">6</button>
+        <button type="button" class="calcBtn" data-value="+" class="operator">
+          +
+        </button>
+        <button type="button" class="calcBtn" data-value="1">1</button>
+        <button type="button" class="calcBtn" data-value="2">2</button>
+        <button type="button" class="calcBtn" data-value="3">3</button>
+        <button type="button" class="calcBtn" data-value="-" class="operator">
+          -
+        </button>
+        <button type="button" class="calcBtn" data-value="0">0</button>
+        <button type="button" class="calcBtn" data-value=".">.</button>
+        <button type="button" class="calcBtn" data-value="%" class="operator">
+          %
+        </button>
+        <button type="button" id="equal">=</button>
+      </div>
+      <button id="change-theme">MUDAR TEMA</button>
+      <button id="copy-result">COPIAR RESULTADO</button>
+    </div>
+  </body>
+</html>

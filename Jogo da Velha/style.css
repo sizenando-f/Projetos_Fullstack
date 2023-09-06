@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 20px;
+}
+
+/* .name-part {
+} */
+
+.playerNameLabel {
+  font-size: 1.3rem;
+}
+.playerNameInput {
+  display: block;
+  width: 20rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+
+#start-button {
+  background-color: bisque;
+  border: 0px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#start-button:hover {
+  background-color: antiquewhite;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+#TimeOf {
+  font-size: 1rem;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  padding: 10px;
+}
+#game-area {
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+
+.option-block {
+  border: 2px solid;
+  height: 107px;
+  width: 106px;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.2rem;
+  border-radius: 10px;
+}
+
+#play-again-button {
+  background-color: bisque;
+  border: 0px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#play-again-button:hover {
+  background-color: antiquewhite;
+}

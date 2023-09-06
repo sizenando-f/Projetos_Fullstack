@@ -1,0 +1,347 @@
+.main-container {
+  display: flex;
+}
+
+.container-main-title {
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.main-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 166, 0, 0.845);
+  border-radius: 2rem;
+  box-shadow: 0px 0px 2rem orange;
+}
+
+.main-title .title {
+  font-weight: bold;
+  color: black;
+  font-size: 2rem;
+}
+
+.main-title .subtitle {
+  margin-top: -1.3rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: white;
+  text-shadow: 0px 0px 3px white;
+}
+
+.main-subtitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-subtitle .inovation {
+  color: orange;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  height: 13rem;
+  width: 13rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rem;
+  padding: 1rem;
+  box-shadow: 0px 0px 2rem orange;
+  transition: 0.2s;
+}
+
+.main-subtitle .inovation:hover {
+  scale: 1.1;
+  cursor: default;
+}
+
+.main-subtitle .subtitle {
+  margin-top: -1.2rem;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.info .card {
+  transition: 0.2s;
+}
+.info .card:hover {
+  background-color: rgb(255, 191, 71);
+}
+
+.rendimento {
+  width: 5rem;
+  display: flex;
+  align-self: center;
+}
+
+.person {
+  width: 5rem;
+  display: flex;
+  align-self: center;
+}
+
+.engranagem {
+  width: 5rem;
+  display: flex;
+  align-self: center;
+}
+
+.second-part {
+  min-height: 90vh;
+}
+
+.second-title .title {
+  color: orange;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.second-title .subtitle {
+  margin-top: -1rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.carousel-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.second-part .card {
+  background-color: rgb(255, 166, 0);
+  font-size: 1.2rem;
+  color: white;
+
+  transition: 0.2s;
+}
+
+.second-part .card:hover {
+  box-shadow: 0px 0px 1rem orange;
+}
+
+.second-part .card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 1rem white;
+}
+
+.second-part .card .card-body img {
+  width: 10rem;
+  border-radius: 10rem;
+  border: 1rem solid orange;
+}
+
+.third-part {
+  min-height: 70vh;
+}
+
+.third-part .title {
+  color: orange;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.third-part .subtitle {
+  margin-top: -1rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.third-part .prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.third-part .card .btn {
+  color: white;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.third-part .card .btn:hover {
+  box-shadow: 0px 0px 10px orange;
+}
+
+.premium-card p {
+  color: orange;
+}
+
+.premium-card .normal {
+  color: black;
+}
+
+.fourth-part {
+  min-height: 80vh;
+}
+
+.staff {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.staff .card {
+  background-color: white;
+  transition: 0.2s;
+}
+
+.staff .card:hover {
+  transform: translateY(-1rem);
+  cursor: pointer;
+}
+
+.staff .card-text {
+  font-size: 1.3rem;
+}
+
+.staff .card-body {
+  border-radius: 1rem;
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-shadow: 0px 0px 10px orange;
+}
+
+.staff .card-body img {
+  width: 10rem;
+  border-radius: 5rem;
+  border: 1rem solid white;
+}
+
+.part-five {
+  min-height: 60vh;
+}
+
+.part-six {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  flex-wrap: wrap;
+}
+
+.part-six form {
+  background-color: orange;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px orange;
+}
+
+.part-six form button {
+  transition: 0.2s;
+}
+
+.part-six form button:hover {
+  box-shadow: 0px 0px 20px white;
+  background-color: white;
+}
+
+.title-six .title {
+  color: orange;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.title-six .subtitle {
+  margin-top: -1rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.footer {
+  background-color: orange;
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer span {
+  font-weight: bold;
+}
+
+.footer a {
+  text-decoration: none;
+  color: rgb(64, 64, 255);
+  transition: 0.2s;
+}
+
+.footer a:hover {
+  font-weight: bold;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  border-radius: 2rem;
+  width: 30%;
+  height: 30rem;
+  z-index: 999;
+  top: 20%;
+  background-color: orange;
+  position: fixed;
+  box-shadow: 0px 10px 10rem orange;
+  overflow-y: auto;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.popup header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  font-weight: bolder;
+}
+
+#popupTitle {
+  font-weight: bold;
+}
+
+.congrats {
+  position: absolute;
+  background-color: orange;
+  box-shadow: 0px 10px 10rem orange;
+  background-image: url("./images/confetes.webp");
+  border-radius: 3rem;
+  font-size: 3rem;
+  color: white;
+  font-weight: bolder;
+  padding: 2rem;
+}

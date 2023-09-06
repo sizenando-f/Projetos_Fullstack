@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  padding-top: 20vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  min-height: 30vh;
+  background-color: rgb(255, 162, 70);
+  padding: 2rem;
+  text-align: center;
+  gap: 1rem;
+  box-shadow: 0px 5px 10px rgb(255, 162, 70);
+}
+.container h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: white;
+}
+
+#birthday {
+  border-radius: 1rem;
+  height: 2.3rem;
+  padding: 0.2rem;
+}
+
+.day-form {
+  display: block;
+}
+
+#result-area {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 80%;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+#result-area h3 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+#birthdayLabel {
+  font-size: 1.2rem;
+  margin-right: 0.3rem;
+  font-weight: bold;
+}
+
+.btn {
+  margin-left: 1rem;
+}
+
+@media (max-width: 450px) {
+  #result-area {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

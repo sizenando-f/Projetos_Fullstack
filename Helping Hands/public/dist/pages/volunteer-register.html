@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helping Hands - Volunteer Register</title>
+    <link
+      rel="shortcut icon"
+      href="../../images/kisspng-leaf-plant-logo-root-plant-5ace75f3d16ed7.2223774415234800518579.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- script and style minified -->
+    <script src="../../volunteerjs.bundle.min.js" defer></script>
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- script and links activate for coding and commented if u use webpack -->
+    <!-- <link rel="stylesheet" href="../../src/styles/css/style.css" />
+    <script
+      src="../../src/scripts/modules/volunteer-register.js"
+      defer
+    ></script> -->
+    <!-- --------------------------------------------------------------- -->
+  </head>
+  <body>
+    <div class="container-fluid main-page-volunteer">
+      <div class="container-fluid group">
+        <div
+          class="register-area"
+          data-aos="flip-right"
+          data-aos-duration="1000"
+        >
+          <h5 class="text-center">Volunteer Register</h5>
+          <form class="row g-3" id="volunteer-form">
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="step">
+              <div class="col-12">
+                <label for="inputName" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputName"
+                  placeholder="Joe Doe"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="d-flex flex-wrap">
+                <div class="col me-1">
+                  <label for="inputEmail4" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputEmail4"
+                    placeholder="youremail@email.com"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="col mb-3">
+                  <label for="inputPassword4" class="form-label"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="inputPassword4"
+                    placeholder="Password"
+                  />
+                </div>
+              </div>
+
+              <div class="text-end">
+                <button type="button" class="next-btn">Next</button>
+              </div>
+            </div>
+            <div class="step">
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="R. Joe B. Doe 6969"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="d-flex flex-wrap">
+                <div class="col me-1">
+                  <label for="inputCity" class="form-label">City</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputCity"
+                    placeholder="Your city"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="col">
+                  <label for="inputState" class="form-label">State</label>
+                  <select id="inputState" class="form-select">
+                    <option selected id="default">Choose...</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-3 mb-3">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputZip"
+                  placeholder="79130-000"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="d-flex justify-content-between">
+                <button type="button" class="prev-btn mb-1">Previous</button>
+                <button type="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="img-area">
+          <img
+            src="../../images/volunteer-register/undraw_social_bio_re_0t9u.svg"
+            alt=""
+            class="img-fluid"
+          />
+          <h3 class="text-center">Welcome Volunteer!</h3>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
