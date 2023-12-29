@@ -1,0 +1,6 @@
+tld = Country code top-lebel domain
+cca2 / ccn3/ cca3
+unMember = United Nations Member
+latlng = latitude longitude
+landLocked = não tem acesso ao mar
+CoatOfArms = brasão
