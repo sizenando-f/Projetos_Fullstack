@@ -6,10 +6,6 @@ a {
   text-decoration: none;
 }
 
-#country-name {
-  border-bottom: solid 1px;
-}
-
 #country-input {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -33,4 +29,9 @@ span {
 
 #country-name-common {
   color: #0d6efd;
+  border-bottom: 1px solid;
+}
+
+#info1 {
+  height: 15rem;
 }

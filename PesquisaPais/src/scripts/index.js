@@ -61,7 +61,17 @@ document
           document.getElementById("cca2-label").innerText = country.cca2;
           document.getElementById("ccn3-label").innerText = country.ccn3;
           document.getElementById("cca3-label").innerText = country.cca3;
-          document.getElementById("cioc-label").innerText = country.cioc;
+          document.getElementById("cioc-label").innerText =
+            country.cioc ?? "Inexistent";
+          if (country.independent)
+            document.getElementById("independent-label").innerText = "Yes";
+          else document.getElementById("independent-label").innerText = "No";
+          if (country.unMember)
+            document.getElementById("unMember-label").innerText = "Yes";
+          else document.getElementById("unMember-label").innerText = "No";
+          Object.entries(country.currencies).forEach((currency) => {
+            console.log(currency[1]);
+          });
         }
       });
     } else {
