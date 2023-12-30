@@ -70,7 +70,11 @@ document
             document.getElementById("unMember-label").innerText = "Yes";
           else document.getElementById("unMember-label").innerText = "No";
           Object.entries(country.currencies).forEach((currency) => {
-            console.log(currency[1]);
+            document.getElementById("currency-label").innerText = currency[0];
+            document.getElementById("currency-name-label").innerText =
+              currency[1].name;
+            document.getElementById("symbol-label").innerText =
+              currency[1].symbol;
           });
         }
       });
