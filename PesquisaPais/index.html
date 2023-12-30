@@ -16,14 +16,54 @@
   </head>
   <body>
     <div class="container-fluid">
-      <div class="row p-2">
-        <div class="col d-flex justify-content-center">
-          <form id="country-form">
-            <label for="country-input" class="me-1">Escolha o país: </label>
-            <input type="text" id="country-input" list="countries-options" />
-            <button type="submit" class="btn btn-primary ms-3">Procurar</button>
-            <datalist id="countries-options"></datalist>
-          </form>
+      <div class="d-flex justify-content-center p-2">
+        <form id="country-form">
+          <div class="input-group input-group-default mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm"
+              >Choose the country</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm"
+              list="countries-options"
+              id="country-input"
+            />
+            <button type="submit" class="btn btn-primary ms-3">Search</button>
+          </div>
+
+          <datalist id="countries-options"></datalist>
+        </form>
+      </div>
+      <div class="container-fluid first d-flex gap-4">
+        <div class="card mb-3" style="width: 18rem">
+          <img
+            src=""
+            class="card-img-top"
+            alt="country-flag"
+            id="country-flag"
+          />
+          <div
+            class="card-body d-flex flex-column justify-content-center align-items-center"
+          >
+            <h4 class="card-title" id="country-name-common"></h4>
+            <p class="card-text" id="country-name-official"></p>
+            <a href="#" class="card-link" id="country-map-link" target="_blank"
+              >Map</a
+            >
+          </div>
+        </div>
+        <div class="card" style="width: 20rem">
+          <div class="card-body d-flex flex-column justify-content-center">
+            <h6 class="card-title">
+              Country code top-level domain: <span id="tld-label"></span>
+            </h6>
+            <h6 class="card-title">CCA2: <span id="cca2-label"></span></h6>
+            <h6 class="card-title">CCN3: <span id="ccn3-label"></span></h6>
+            <h6 class="card-title">CCA3: <span id="cca3-label"></span></h6>
+            <h6 class="card-title">CIOC: <span id="cioc-label"></span></h6>
+          </div>
         </div>
       </div>
     </div>

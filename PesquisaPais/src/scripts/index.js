@@ -14,3 +14,57 @@ async function initializeDatalist() {
 }
 
 initializeDatalist();
+
+async function countryValidation(countryName) {
+  const countries = await getCountries();
+  try {
+    if (!countries.find((country) => countryName == country.name.common))
+      throw new Error("invalid input");
+    return 1;
+  } catch (error) {
+    return 0;
+  }
+}
+
+function changeInputColor(code) {
+  const countryInput = document.getElementById("country-input");
+  if (code) {
+    countryInput.classList.remove("input-error");
+    countryInput.classList.add("input-right");
+  } else {
+    countryInput.classList.remove("input-right");
+    countryInput.classList.add("input-error");
+  }
+}
+
+document
+  .getElementById("country-form")
+  .addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+
+    const countryInput = document.getElementById("country-input");
+    const countries = await getCountries();
+
+    if (await countryValidation(countryInput.value)) {
+      changeInputColor(1);
+
+      countries.forEach((country) => {
+        if (country.name.common === countryInput.value) {
+          document.getElementById("country-flag").src = country.flags.svg;
+          document.getElementById("country-name-common").innerText =
+            country.name.common;
+          document.getElementById("country-name-official").innerText =
+            country.name.official;
+          document.getElementById("country-map-link").href =
+            country.maps.googleMaps;
+          document.getElementById("tld-label").innerText = country.tld;
+          document.getElementById("cca2-label").innerText = country.cca2;
+          document.getElementById("ccn3-label").innerText = country.ccn3;
+          document.getElementById("cca3-label").innerText = country.cca3;
+          document.getElementById("cioc-label").innerText = country.cioc;
+        }
+      });
+    } else {
+      changeInputColor(0);
+    }
+  });
