@@ -16,6 +16,6 @@ Aqui você encontrará os todos projetos que criei até o momento
     <li><strong>Jogo da Velha:</strong> Jogue o clássico contra seu amigo numa interface aconchegante;</li>
     <li><strong>Sistema de Vagas de Emprego:</strong> Uma simulação de cadastro de vagas;</li>
     <li><strong>WebAnnotation:</strong> Crie suas anotações privadas e permanentes;</li>
-    <li><strong>CountrySearch:</strong> Descubra informações de qualquer país do mundo;</li>
+    <li><strong>PesquisaPais:</strong> Descubra informações de qualquer país do mundo;</li>
   </ul>
 </details>
