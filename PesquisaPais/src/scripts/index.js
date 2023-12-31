@@ -76,6 +76,52 @@ document
             document.getElementById("symbol-label").innerText =
               currency[1].symbol;
           });
+          document.getElementById("capital-label").innerText = country.capital;
+          document.getElementById("region-label").innerText = country.region;
+          document.getElementById("subregion-label").innerText =
+            country.subregion;
+          let languages = "";
+          Object.entries(country.languages).forEach((language) => {
+            languages += `${language[1]} `;
+            document.getElementById("language-label").innerText = languages;
+          });
+          document.getElementById("population-label").innerText =
+            country.population;
+          document.getElementById("area-label").innerText = country.area;
+          document.getElementById(
+            "latlng-label"
+          ).innerText = `${country.latlng[0]}, ${country.latlng[1]}`;
+          if (country.landlocked)
+            document.getElementById("landlocked-label").innerText = "Yes";
+          else document.getElementById("landlocked-label").innerText = "No";
+          document.getElementById("border-label").innerText =
+            country.borders ?? "Does not exist";
+          if (country.gini) {
+            Object.entries(country.gini).forEach((gini) => {
+              document.getElementById("gini-label").innerText = gini[1];
+            });
+          } else {
+            document.getElementById("gini-label").innerText = "Does not exist";
+          }
+
+          document.getElementById("signs-label").innerText = country.car.signs;
+          document.getElementById("street-label").innerText = country.car.side;
+          document.getElementById("continent-label").innerText =
+            country.continents;
+          document.getElementById("coatofarms-flag").src = "";
+          document.getElementById("coatofarms-flag").src =
+            country.coatOfArms.svg;
+          document.getElementById("postalcode-label").innerText =
+            country.postalCode.format;
+          let idd = country.idd.root;
+          country.idd.suffixes.forEach((suffix) => {
+            idd += suffix;
+          });
+          document.getElementById("idd-label").innerText = idd;
+          document.getElementById("timezones-label").innerText =
+            country.timezones;
+          document.getElementById("start-label").innerText =
+            country.startOfWeek;
         }
       });
     } else {
