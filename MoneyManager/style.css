@@ -127,6 +127,10 @@ body {
   background-color: rgb(255, 85, 85);
 }
 
+.transation-item .save-button:hover {
+  background-color: rgb(90, 197, 90);
+}
+
 .buttons {
   display: flex;
   gap: 0.3rem;
