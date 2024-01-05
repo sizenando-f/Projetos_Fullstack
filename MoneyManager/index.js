@@ -1,6 +1,7 @@
 function renderTransation(transationData) {
   const transationItem = document.createElement("div");
   transationItem.className = "transation-item";
+  transationItem.id = transationData.id;
 
   const items = document.createElement("div");
   items.className = "items";
@@ -9,7 +10,7 @@ function renderTransation(transationData) {
   transationName.id = `transation-name-${transationData.id}`;
   transationName.type = "text";
   transationName.value = transationData.name;
-  transationName.disabled = "true";
+  transationName.disabled = true;
 
   const transationValue = document.createElement("input");
   transationValue.id = `transation-value-${transationData.id}`;
@@ -27,10 +28,25 @@ function renderTransation(transationData) {
   const editButton = document.createElement("button");
   editButton.className = "edit-button";
   editButton.textContent = "Edit";
+  editButton.addEventListener("click", async (ev) => {
+    let id = ev.currentTarget.parentNode.parentNode.id;
+    const itemsDiv = ev.currentTarget.parentNode.parentNode.childNodes[0];
+    itemsDiv.childNodes.forEach((input) => {
+      input.disabled = false;
+      console.log(input);
+    });
+  });
 
   const deleteButton = document.createElement("button");
   deleteButton.className = "delete-button";
   deleteButton.textContent = "Delete";
+  deleteButton.addEventListener("click", async (ev) => {
+    ev.currentTarget.parentNode.parentNode.remove();
+    let id = ev.currentTarget.parentNode.parentNode.id;
+    await fetch(`http://localhost:3000/transation/${id}`, {
+      method: "DELETE",
+    });
+  });
 
   buttons.append(editButton, deleteButton);
 
@@ -66,5 +82,7 @@ form.addEventListener("submit", async (ev) => {
     body: JSON.stringify(newTransation),
   });
 
+  const savedTransation = await resolve.json();
+  renderTransation(savedTransation);
   form.reset();
 });
