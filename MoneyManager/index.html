@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Control</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn1.iconfinder.com/data/icons/economic-growth/512/investing-money-investor-invest-statistic-512.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <main class="content">
+      <form action="http://localhost:3000/history" method="post" class="form">
+        <div>
+          <label for="name">Name: </label> <input type="text" id="name" />
+        </div>
+        <div>
+          <label for="value">Value: </label>
+          <input type="number" name="value" id="value" />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <section class="history"></section>
+    </main>
+  </body>
+</html>
