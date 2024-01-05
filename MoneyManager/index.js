@@ -31,42 +31,46 @@ function renderTransation(transationData) {
   editButton.textContent = "Edit";
 
   editButton.addEventListener("click", (ev) => {
-    let id = ev.currentTarget.parentNode.parentNode.id;
-    const itemsDiv = ev.currentTarget.parentNode.parentNode.childNodes[0];
-
     const buttonsDiv = ev.currentTarget.parentNode;
-    itemsDiv.childNodes.forEach((input) => {
-      input.disabled = false;
-    });
 
-    const saveButton = document.createElement("button");
-    saveButton.textContent = "Save";
-    saveButton.className = "save-button";
+    if (buttonsDiv.childNodes.length === 2) {
+      let id = ev.currentTarget.parentNode.parentNode.id;
+      const itemsDiv = ev.currentTarget.parentNode.parentNode.childNodes[0];
 
-    saveButton.addEventListener("click", async (ev2) => {
-      ev2.currentTarget.remove();
+      itemsDiv.childNodes.forEach((input) => {
+        input.disabled = false;
+      });
 
-      const updateTransation = {
-        name: itemsDiv.childNodes[0].value,
-        value: parseFloat(itemsDiv.childNodes[1].value),
-      };
+      const saveButton = document.createElement("button");
+      saveButton.textContent = "Save";
+      saveButton.className = "save-button";
 
-      const response = await fetch(`http://localhost:3000/transation/${id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updateTransation),
-      }).then((res) => res.json());
-      itemsDiv.childNodes[0].disabled = true;
-      itemsDiv.childNodes[0].value = response.name;
-      itemsDiv.childNodes[1].disabled = true;
-      itemsDiv.childNodes[1].value = response.value.toFixed(2);
-      if (response.value < 0) itemsDiv.childNodes[1].className = "negative";
-      else itemsDiv.childNodes[1].className = "positive";
-    });
+      saveButton.addEventListener("click", async (ev2) => {
+        ev2.currentTarget.remove();
 
-    buttonsDiv.appendChild(saveButton);
+        const updateTransation = {
+          name: itemsDiv.childNodes[0].value,
+          value: parseFloat(itemsDiv.childNodes[1].value),
+        };
+
+        const response = await fetch(`http://localhost:3000/transation/${id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updateTransation),
+        }).then((res) => res.json());
+        itemsDiv.childNodes[0].disabled = true;
+        itemsDiv.childNodes[0].value = response.name;
+        itemsDiv.childNodes[1].disabled = true;
+        itemsDiv.childNodes[1].value = response.value.toFixed(2);
+
+        if (response.value < 0) itemsDiv.childNodes[1].className = "negative";
+        else itemsDiv.childNodes[1].className = "positive";
+      });
+
+      buttonsDiv.appendChild(saveButton);
+    }
   });
 
   const deleteButton = document.createElement("button");
