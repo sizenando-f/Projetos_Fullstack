@@ -135,3 +135,21 @@ body {
   display: flex;
   gap: 0.3rem;
 }
+
+.resumo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#divTotal {
+  background-color: rgb(224, 224, 224);
+  display: flex;
+  gap: 1rem;
+  font-size: xx-large;
+  font-weight: bold;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}

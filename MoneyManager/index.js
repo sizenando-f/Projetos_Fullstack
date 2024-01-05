@@ -1,3 +1,16 @@
+async function updateTotal() {
+  const resolve = await fetch("http://localhost:3000/transation").then((res) =>
+    res.json()
+  );
+  let soma = resolve.reduce((acc, transation) => {
+    return acc + transation.value;
+  }, 0);
+  const totalDiv = document.getElementById("total");
+  totalDiv.textContent = soma.toFixed(2);
+  if (soma < 0) totalDiv.className = "negative";
+  else totalDiv.className = "positive";
+}
+
 function renderTransation(transationData) {
   const transationItem = document.createElement("div");
   transationItem.className = "transation-item";
@@ -67,6 +80,7 @@ function renderTransation(transationData) {
 
         if (response.value < 0) itemsDiv.childNodes[1].className = "negative";
         else itemsDiv.childNodes[1].className = "positive";
+        updateTotal();
       });
 
       buttonsDiv.appendChild(saveButton);
@@ -82,6 +96,7 @@ function renderTransation(transationData) {
     await fetch(`http://localhost:3000/transation/${id}`, {
       method: "DELETE",
     });
+    updateTotal();
   });
 
   buttons.append(editButton, deleteButton);
@@ -98,6 +113,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   );
 
   transations.forEach(renderTransation);
+  updateTotal();
 });
 
 const form = document.querySelector("form");
@@ -121,4 +137,5 @@ form.addEventListener("submit", async (ev) => {
   const savedTransation = await resolve.json();
   renderTransation(savedTransation);
   form.reset();
+  updateTotal();
 });

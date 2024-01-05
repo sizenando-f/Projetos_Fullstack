@@ -14,16 +14,20 @@
   </head>
   <body>
     <main class="content">
-      <form action="http://localhost:3000/history" method="post" class="form">
-        <div>
-          <label for="name">Name: </label> <input type="text" id="name" />
-        </div>
-        <div>
-          <label for="value">Value: </label>
-          <input type="text" name="value" id="value" />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+      <section class="resumo">
+        <div id="divTotal">Total: <span id="total"></span></div>
+        <form action="http://localhost:3000/history" method="post" class="form">
+          <div>
+            <label for="name">Name: </label> <input type="text" id="name" />
+          </div>
+          <div>
+            <label for="value">Value: </label>
+            <input type="text" name="value" id="value" />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
       <section class="transation-section" id="transation-section"></section>
     </main>
   </body>
