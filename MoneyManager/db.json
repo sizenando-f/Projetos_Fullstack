@@ -4,6 +4,26 @@
       "name": "Salário",
       "value": 6750,
       "id": 1
+    },
+    {
+      "name": "Mensalidade da Unigran",
+      "value": -320,
+      "id": 2
+    },
+    {
+      "name": "Crédito",
+      "value": -30,
+      "id": 3
+    },
+    {
+      "name": "Corte de Cabelo",
+      "value": -30,
+      "id": 4
+    },
+    {
+      "name": "Projeto Fs",
+      "value": 3500,
+      "id": 5
     }
   ]
 }

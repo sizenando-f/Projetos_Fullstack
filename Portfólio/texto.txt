@@ -1,0 +1,30 @@
+Headline opção 1:
+Eu transformo
+ideias complexas
+em experiências
+digitais
+elegantes
+$$$
+
+Headline opção 2:
+Estudante de
+Ciência da
+Computação e
+Desenvolvedor de
+Software
+
+Parágrafo de apresentação:
+<Emoji de acenar> Prazer em te conhecer, eu sou
+um desenvolvedor de software residente em
+[MATO GROSSO DO SUL, BRASIL]
+Eu gosto de construir coisas
+por completo, mas o que mais sou
+apaixonado é em criar algo [IMPACTANTE & ÚTIL]
+
+Transição:
+No que eu estive trabalhando
+<Projetos em C> Mais de 33 projetos complexos realizados (C, C++, Assembly)
+<Projetos Fullstack> Mais de 13 projetos realizados (Front-end: HTML, CSS, SCSS, React. Back-end: JavaScript, TypeScript)
+
+Desafios:
+Desafio #1
